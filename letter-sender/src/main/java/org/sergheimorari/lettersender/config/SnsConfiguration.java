@@ -14,6 +14,6 @@ import org.springframework.validation.annotation.Validated;
 @ConfigurationProperties(prefix = "letter-sender.aws.sns")
 public class SnsConfiguration {
 
-    @NotBlank(message = "SNS topic ARN must be configured")
-    public String topicArn;
+  @NotBlank(message = "SNS topic ARN must be configured")
+  public String topicArn;
 }
