@@ -16,14 +16,16 @@ echo "SQS queue '$queue_name' created successfully"
 table_name="ChristmasLetters"
 awslocal dynamodb create-table --table-name $table_name \
   --attribute-definitions \
-      AttributeName=Email,AttributeType=S \
+    AttributeName=Email,AttributeType=S \
   --key-schema \
-      AttributeName=Email,KeyType=HASH \
+    AttributeName=Email,KeyType=HASH \
   --provisioned-throughput \
-      ReadCapacityUnits=10,WriteCapacityUnits=5
+    ReadCapacityUnits=10,WriteCapacityUnits=5
 
 # Subscribe SQS to SNS
-awslocal sns subscribe --topic-arn "arn:aws:sns:eu-central-1:000000000000:$topic_name" --protocol sqs --notification-endpoint "arn:aws:sqs:eu-central-1:000000000000:$queue_name"
+awslocal sns subscribe --topic-arn "arn:aws:sns:us-east-1:000000000000:$topic_name" \
+ --protocol sqs --notification-endpoint "arn:aws:sqs:us-east-1:000000000000:$queue_name"
+
 echo "Subscribed SQS queue '$queue_name' to SNS topic '$topic_name' successfully"
 
 echo "Resource initialization complete!"

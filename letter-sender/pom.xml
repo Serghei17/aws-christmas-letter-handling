@@ -6,7 +6,7 @@
 
 	<parent>
 		<groupId>com.christmas.letter</groupId>
-		<artifactId>christmas-letter-service</artifactId>
+		<artifactId>christmas-letter-handling</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 

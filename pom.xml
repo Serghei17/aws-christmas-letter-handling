@@ -10,11 +10,11 @@
 	</parent>
 
 	<groupId>com.christmas.letter</groupId>
-	<artifactId>christmas-letter-service</artifactId>
+	<artifactId>christmas-letter-handling</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>christmas-letter-service</name>
+	<name>christmas-letter-handling</name>
 	<description>Christmas Letter Project</description>
 
 	<properties>
@@ -24,7 +24,7 @@
 
 	<modules>
 		<module>letter-sender</module>
-		<module>letter-receiver</module>
+		<module>letter-processor</module>
 	</modules>
 
 	<dependencies>

@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: letterDto-processor
+
+server:
+  port: 8082
+
+---
+
+spring:
+  cloud:
+    aws:
+      credentials:
+        access-key: ${AWS_ACCESS_KEY}
+        secret-key: ${AWS_SECRET_KEY}
+      sqs:
+        region: ${AWS_SQS_REGION}
+      dynamodb:
+        region: ${AWS_DYNAMODB_REGION}
+        endpoint: ${AWS_DYNAMODB_ENDPOINT}
+
+letter-processor:
+  aws:
+    sqs:
+      queue.url: ${AWS_SQS_QUEUE_URL}
