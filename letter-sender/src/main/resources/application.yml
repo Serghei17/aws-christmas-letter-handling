@@ -1,4 +1,13 @@
 spring:
+  application:
+    name: letter-sender
+
+server:
+  port: 8081
+
+---
+#aws configs
+spring:
   cloud:
     aws:
       credentials:
@@ -7,10 +16,8 @@ spring:
       sns:
         region: ${AWS_SNS_REGION}
 
+#topic-arn
 letter-sender:
   aws:
     sns:
       topic-arn: ${AWS_SNS_TOPIC_ARN}
-
-server:
-  port: 8081
