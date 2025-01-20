@@ -22,7 +22,7 @@ public class CustomExceptionHandler {
             .map(MessageSourceResolvable::getDefaultMessage)
             .toList();
 
-    return ResponseEntity.badRequest().body(new ErrorResponse("Validation Failed!", details));
+    return ResponseEntity.badRequest().body(new ErrorResponse("Validation failed!", details));
   }
 
   @ExceptionHandler(MessagingException.class)

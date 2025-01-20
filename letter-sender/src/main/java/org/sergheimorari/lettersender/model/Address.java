@@ -11,5 +11,5 @@ public record Address(
         @Size(min = 2, max = 2, message = "State must be a two-letter abbreviation")
         String state,
     @NotBlank(message = "Zipcode is mandatory")
-        @Pattern(regexp = "^\\d{5}(-\\{4})?$", message = "Invalid zipcode")
+        @Pattern(regexp = "^\\d{6}?$", message = "Invalid zipcode")
         String zip) {}

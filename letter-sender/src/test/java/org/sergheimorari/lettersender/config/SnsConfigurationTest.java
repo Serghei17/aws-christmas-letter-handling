@@ -10,7 +10,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @SpringBootTest(classes = SnsConfiguration.class)
 @EnableConfigurationProperties(SnsConfiguration.class)
-@TestPropertySource("classpath:config-test.yml")
+@TestPropertySource("classpath:application-test.yml")
 public class SnsConfigurationTest {
 
   @Autowired private SnsConfiguration snsConfiguration;
