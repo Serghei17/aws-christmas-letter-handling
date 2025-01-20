@@ -1,17 +1,16 @@
 package org.sergheimorari.letterprocessor.listener;
 
+import static org.sergheimorari.letterprocessor.util.LetterConverter.letterDtoToLetter;
+
 import io.awspring.cloud.sqs.annotation.SqsListener;
 import jakarta.validation.Valid;
+import java.time.OffsetDateTime;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.sergheimorari.letterprocessor.dto.LetterDto;
 import org.sergheimorari.letterprocessor.repository.LetterRepository;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Service;
-
-import java.time.OffsetDateTime;
-
-import static org.sergheimorari.letterprocessor.util.LetterConverter.letterDtoToLetter;
 
 @Slf4j
 @Service

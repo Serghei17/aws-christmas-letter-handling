@@ -1,12 +1,11 @@
-package org.sergheimorari.lettersender;
+package org.sergheimorari.lettersender.utils;
 
+import java.util.stream.Stream;
 import lombok.experimental.UtilityClass;
 import net.bytebuddy.utility.RandomString;
 import org.junit.jupiter.params.provider.Arguments;
 import org.sergheimorari.lettersender.model.Address;
 import org.sergheimorari.lettersender.model.Letter;
-
-import java.util.stream.Stream;
 
 @UtilityClass
 public class SendLetterTestUtils {

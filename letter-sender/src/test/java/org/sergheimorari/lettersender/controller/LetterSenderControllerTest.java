@@ -1,8 +1,8 @@
 package org.sergheimorari.lettersender.controller;
 
 import static org.mockito.Mockito.doThrow;
-import static org.sergheimorari.lettersender.SendLetterTestUtils.createTestAddress;
-import static org.sergheimorari.lettersender.SendLetterTestUtils.createTestLetter;
+import static org.sergheimorari.lettersender.utils.SendLetterTestUtils.createTestAddress;
+import static org.sergheimorari.lettersender.utils.SendLetterTestUtils.createTestLetter;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;

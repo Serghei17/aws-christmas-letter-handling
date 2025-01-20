@@ -1,8 +1,8 @@
 package org.sergheimorari.lettersender.service;
 
 import static org.mockito.Mockito.*;
-import static org.sergheimorari.lettersender.SendLetterTestUtils.createTestAddress;
-import static org.sergheimorari.lettersender.SendLetterTestUtils.createTestLetter;
+import static org.sergheimorari.lettersender.utils.SendLetterTestUtils.createTestAddress;
+import static org.sergheimorari.lettersender.utils.SendLetterTestUtils.createTestLetter;
 
 import io.awspring.cloud.sns.core.SnsTemplate;
 import org.junit.jupiter.api.Test;
